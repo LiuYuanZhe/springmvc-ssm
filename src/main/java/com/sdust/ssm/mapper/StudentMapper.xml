@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sdust.ssm.mapper.StudentMapper">
+
+    <!--查询商品列表-->
+    <select id="getStudentById" resultType="Student">
+        SELECT * FROM student WHERE id=1
+    </select>
+    <select id="getAllStudent" resultType="Student">
+        SELECT id,name,sex,age,memo,birthday FROM student
+    </select>
+    <insert id="addStudent" parameterType="Student">
+        INSERT INTO student (name,sex,age,memo,birthday) VALUES (#{name},#{sex},#{age},#{memo},#{birthday})
+    </insert>
+    <delete id="deleteStudent" parameterType="int">
+        DELETE FROM student WHERE id=#{id}
+    </delete>
+    <!--<update id="updateStudent" parameterType="Student">-->
+        <!--UPDATE -->
+    <!--</update>-->
+</mapper>

@@ -7,5 +7,4 @@ import com.sdust.ssm.po.Test;
  */
 public interface TestService{
     public Test getTest();
-
 }
